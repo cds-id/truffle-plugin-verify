@@ -133,7 +133,7 @@ module.exports = {
 ```
 
 #### All supported platforms & networks
-- [Etherscan](https://etherscan.io/) (Ethereum Mainnet & Ropsten, Kovan, Rinkeby, Goerli Testnets)
+- [Etherscan](https://etherscan.io/) (Ethereum Mainnet & Ropsten, Kovan, Rinkeby, Goerli, Sepolia Testnets)
 - [Optimistic Etherscan](https://optimistic.etherscan.io/) (Optimistic Ethereum Mainnet & Kovan Testnet & Goerli Testnet)
 - [Arbiscan](https://arbiscan.io) (Arbitrum Mainnet & Rinkeby Testnet & Goerli Testnet)
 - [BscScan](https://bscscan.com) (BSC Mainnet & Testnet)
