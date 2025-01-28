@@ -29,7 +29,9 @@ const API_URLS = {
   80001: 'https://api-testnet.polygonscan.com/api',
   11155111: 'https://api-sepolia.etherscan.io/api',
   1313161554: 'https://api.aurorascan.dev/api',
-  1313161555: 'https://api-testnet.aurorascan.dev/api'
+  1313161555: 'https://api-testnet.aurorascan.dev/api',
+  84531: 'https://api-sepolia.basescan.org/api', // Base Sepolia
+  8453: 'https://api.basescan.org/api' // Base Mainnet
 }
 
 const EXPLORER_URLS = {
@@ -63,7 +65,9 @@ const EXPLORER_URLS = {
   80001: 'https://mumbai.polygonscan.com/address',
   11155111: 'https://sepolia.etherscan.io/address',
   1313161554: 'https://aurorascan.dev/address',
-  1313161555: 'https://testnet.aurorascan.dev/address'
+  1313161555: 'https://testnet.aurorascan.dev/address',
+  84531: 'https://sepolia.basescan.org/address', // Base Sepolia
+  8453: 'https://basescan.org/address' // Base Mainnet
 }
 
 const RequestStatus = {

@@ -1,8 +1,8 @@
 {
-  "name": "truffle-plugin-verify",
+  "name": "@cds.id/truffle-plugin-verify",
   "version": "0.5.31",
-  "description": "Verify your deployed smart contracts on Etherscan from the Truffle CLI",
-  "repository": "https://github.com/rkalis/truffle-plugin-verify",
+  "description": "Verify your deployed smart contracts on Etherscan from the Truffle CLI - active maintenance",
+  "repository": "https://github.com/cds-id/truffle-plugin-verify",
   "main": "verify.js",
   "files": [
     "constants.js",
@@ -12,7 +12,10 @@
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "prepublishOnly": "npm run lint",
+    "publish:npm": "npm publish --access public",
+    "release": "release-it"
   },
   "keywords": [
     "truffle",
@@ -36,6 +39,13 @@
     "eslint-plugin-import": "^2.24.2",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.1.0",
-    "eslint-plugin-standard": "^5.0.0"
+    "eslint-plugin-standard": "^5.0.0",
+    "release-it": "^15.0.0",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }

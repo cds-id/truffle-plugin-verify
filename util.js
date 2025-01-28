@@ -160,14 +160,16 @@ const getApiKey = (config, apiUrl, logger) => {
 
   enforce(config.api_keys, 'No API Keys provided', logger)
 
+  if (apiUrl.includes('basescan')) return getApiKeyForPlatform(config, 'Basescan', logger)
   if (apiUrl.includes('bscscan')) return getApiKeyForPlatform(config, 'BscScan', logger)
   if (apiUrl.includes('snowtrace')) return getApiKeyForPlatform(config, 'Snowtrace', logger)
   if (apiUrl.includes('polygonscan')) return getApiKeyForPlatform(config, 'PolygonScan', logger)
   if (apiUrl.includes('ftmscan')) return getApiKeyForPlatform(config, 'FtmScan', logger)
   if (apiUrl.includes('hecoinfo')) return getApiKeyForPlatform(config, 'HecoInfo', logger)
   if (apiUrl.includes('moonscan')) return getApiKeyForPlatform(config, 'Moonscan', logger)
-  if (apiUrl.includes('optimistic') || apiUrl.includes('optimism')) 
+  if (apiUrl.includes('optimistic') || apiUrl.includes('optimism')) {
     return getApiKeyForPlatform(config, 'Optimistic Etherscan', logger)
+  }
   if (apiUrl.includes('arbiscan')) return getApiKeyForPlatform(config, 'Arbiscan', logger)
   if (apiUrl.includes('bttcscan')) return getApiKeyForPlatform(config, 'BTTCScan', logger)
   if (apiUrl.includes('aurorascan')) return getApiKeyForPlatform(config, 'Aurorascan', logger)
@@ -179,6 +181,7 @@ const getApiKey = (config, apiUrl, logger) => {
 
 const getApiKeyForPlatform = (config, platform, logger) => {
   const mapping = {
+    Basescan: config.api_keys.basescan,
     Etherscan: config.api_keys.etherscan,
     'Optimistic Etherscan': config.api_keys.optimistic_etherscan,
     Arbiscan: config.api_keys.arbiscan,
