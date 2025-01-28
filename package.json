@@ -2,7 +2,10 @@
   "name": "@cds.id/truffle-plugin-verify",
   "version": "0.5.31",
   "description": "Verify your deployed smart contracts on Etherscan from the Truffle CLI - active maintenance",
-  "repository": "https://github.com/cds-id/truffle-plugin-verify",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cds-id/truffle-plugin-verify.git"
+  },
   "main": "verify.js",
   "files": [
     "constants.js",
